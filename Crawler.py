@@ -1,5 +1,4 @@
-
-file = open('WowChatLog.txt', 'r')
+file = open('C:/Users/Andreas/Documents/Loot logs/WowChatLog.txt', 'r')
 
 def contentIsNotEmpty(ls):
     if(ls == []):
@@ -15,49 +14,34 @@ output = []
 for cnt, line in enumerate(file):
     outputline = []
 
-
-    if '-STARTED-' in line:
-        currLine = next(file)
-        words = currLine.split(' ')
-        
-        date = (' '.join(words[0:2]))
-        
+    if 'Officer' and 'awarded' in line:
+        words = line.split(' ')
         strBuilder = []
+        itemString = ''
+        
+        try:
+            date = (' '.join(words[0:2]))
+            awardedTo = words[5]
+            item = words[7:]
+            itemString = ' '.join(item)
+
+            outputline.append(date)
+            outputline.append(awardedTo)
+            outputline.append(itemString)
             
-        for word in words[::-1]:
-            if word == 'item:':
-                break
-            else:
-                if word != '\n':    
-                    strBuilder.append(word)
-        currItem = strBuilder.reverse()
-        
-        item = (' '.join(strBuilder))[:-1]
-        
-        #Should be more robust, but might work
-        nextLine = next(file).split(' ')
-        awardedTo = ''
-        if nextLine[6] == 'awarded':    
-            awardedTo = nextLine[5]
-    
-    
-        outputline.append(date)
-        outputline.append(item)
-        outputline.append(awardedTo)
-        
-    
-    if contentIsNotEmpty(outputline):
-        output.append(outputline)
+        except IndexError:
+            pass
+            
+        if contentIsNotEmpty(outputline):
+            output.append(outputline)
 
 file.close()
 
 
 
-
-outFile = open('Lootlog.csv','w')
+outFile = open('C:/Users/Andreas/Documents/Loot logs/Log.csv','w')
 
 for line in output:
     outFile.write(', '.join(line))
-    outFile.write('\n')
 outFile.close()
 #Write to out file
