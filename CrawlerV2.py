@@ -1,4 +1,6 @@
 # -*- coding: utf-8 -*-
+# Written by Birch - Sindragosa
+
 import gspread
 import os
 import re
