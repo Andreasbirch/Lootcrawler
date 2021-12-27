@@ -1,0 +1,4 @@
+[config]
+path = "E:\WOTLK\World of Warcraft Client 3.3.5a - Ready to Play\Logs\WowChatLog.txt"
+sheets_id = "1h2b5-Yb5Qe2ygbL_DCx9dq1MT1m5RwiMm6Nb23ZwvwM"
+sheet_name = "lootcrawler"
