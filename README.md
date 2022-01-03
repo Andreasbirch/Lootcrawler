@@ -6,6 +6,7 @@ loot council awards to google sheets, or to text files.
 To utilise the addon best, the following must be set up:
 * [WowScribe v. 3.3.1](https://www.curseforge.com/wow/addons/wowscribe/files/400551)
 * Google API enabled google sheets worksheet
+* A loot council addon capable of announcing awards
 
 ## Setup
 #### WowScribe
@@ -17,6 +18,11 @@ To utilise the addon best, the following must be set up:
 #### Google sheets
 *I recommend following John Whatson Ronney's guide [Here] (https://www.youtube.com/watch?v=ct0xvw_Z0tU) on how to set up. Follow this until around 2:31*
 
+#### Loot council addon
+##### RCLootCouncil
+* Enable "Announce Awards" under Master Looter > Annoncements > Announce Awards. One of the channels must be Officer. The message should follow the pattern 
+  
+  "&p was awarded with &i for &r!"
 
 #### Setting up the crawler
 * Open the ```config.txt``` file
