@@ -11,6 +11,7 @@ config = open('config.txt', 'r').read().split('\n')
 path = re.findall(r"\"(.*)\"", config[1])[0]
 sheets_id = re.findall(r"\"(.*)\"", config[2])[0]
 sheet_name = re.findall(r"\"(.*)\"", config[3])[0]
+channel_name = re.findall(r"\"(.*)\"", config[4])[0].upper()
 sheets = False
 
 
@@ -26,7 +27,7 @@ if os.path.exists(path):
 
     rows = []
     for line in file:
-        if '|Hchannel:OFFICER|h[Officer]|h' in line:
+        if '|Hchannel:{0}'.format(channel_name) in line:
             msg = line.split(' ')
             date = msg[0]
             time = msg[1]
