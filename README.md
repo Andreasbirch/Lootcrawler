@@ -1,9 +1,9 @@
 # Lootcrawler 3.3.5a
 This very simple lootcrawler is made to read the contents of a logs file containing items distributed to players through loot council. It can be connected to directly upload
-loot council awards to google sheets, or to text files.
+loot council awards to google sheets, or to text files. It is not an addon, just a small script.
 
 ## Prerequisites
-To utilise the addon best, the following must be set up:
+To utilise the script best, the following must be set up:
 * [WowScribe v. 3.3.1](https://www.curseforge.com/wow/addons/wowscribe/files/400551)
 * Google API enabled google sheets worksheet
 * A loot council addon capable of announcing awards
