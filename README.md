@@ -33,8 +33,9 @@ To utilise the script best, the following must be set up:
 
   The bold text is the id.
 * Type the name of the sheet, for example, "lootcrawler"
+* Type the chat channel name you want to be recorded, for example "raid"
 
 
 ## Running the crawler
-You can use either the precompiled .exe file, compile your own from the ```CrawlerV2.py``` file, or just run the python file itself.
+You can use either the precompiled .exe file inside the ```dist``` folder, compile your own from the ```CrawlerV2.py``` file, or just run the python file itself.
 The crawler will scrape officer messages matching "PLAYER awarded ITEM", and push that to the sheets along with a timestamp.
